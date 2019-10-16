@@ -6,6 +6,7 @@ spring:
 server:
   port: 8001
 spring:
+  profiles: dev
   application:
     name: microservicecloud-dept
   datasource:
@@ -41,12 +42,13 @@ info:
 server:
   port: 8001
 spring:
+  profiles: test
   application:
     name: microservicecloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            # 当前数据源操作类型
     driver-class-name: org.gjt.mm.mysql.Driver              # mysql驱动包
-    url: jdbc:mysql://localhost:3306/clouddb1?serverTimezone=UTC&characterEncoding=utf-8              # 数据库名称
+    url: jdbc:mysql://localhost:3306/clouddb2?serverTimezone=UTC&characterEncoding=utf-8              # 数据库名称
     username: root
     password: 123456
     dbcp2:
